@@ -23,6 +23,11 @@ server.on("connection", (socket) => {
     socket.emit("sendSMsg", "Hi postman!");
   });
 
+  socket.on("sendSMsg", (data) => {
+    console.log(data);
+  });
+
+
   socket.on("disconnect", () => {
     console.log("Client disconnected");
   });
